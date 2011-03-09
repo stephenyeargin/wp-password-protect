@@ -12,8 +12,8 @@ Totally ripped off from http://zeo.my/password-protected-wordpress/
 */
 
 function password_protected() {
-	if ( !is_user_logged_in() )
-		auth_redirect();
+  if ( !is_user_logged_in() )
+    auth_redirect();
 }
 
 add_action('login_head', 'rsd_link');
