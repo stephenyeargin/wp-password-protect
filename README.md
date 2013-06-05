@@ -1,5 +1,5 @@
 **Plugin Name:**
-  Password Protection
+  WP Password Protect
 
 **Plugin URI:**
   https://github.com/stephenyeargin/wp-password-protect

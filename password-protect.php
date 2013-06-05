@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Password Protection
+Plugin Name: WP Password Protect
 Plugin URI: https://github.com/stephenyeargin/wp-password-protect
 Description: Require username and password to access the site.
 Author: Stephen Yeargin
@@ -12,12 +12,12 @@ abstracted it so that it could be enabled/disabled as a plugin.
 
 */
 
-function password_protected() {
+function wp_password_protect() {
   if ( !is_user_logged_in() )
     auth_redirect();
 }
 
 add_action('login_head', 'rsd_link');
 add_action('login_head', 'wlwmanifest_link');
-add_action('template_redirect', 'password_protected');
-add_action('do_feed', 'password_protected');
+add_action('template_redirect', 'wp_password_protect');
+add_action('do_feed', 'wp_password_protect');
